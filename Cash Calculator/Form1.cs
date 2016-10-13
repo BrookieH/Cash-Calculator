@@ -23,7 +23,7 @@ namespace Cash_Calculator
         int change;
         double price;
         double tax;
-        double pricewithTax;
+        double pricewithtax;
 
         public Form1()
         {
@@ -38,18 +38,18 @@ namespace Cash_Calculator
                 poodle = Convert.ToInt16(poodleInput.Text);
                 pug = Convert.ToInt16(pugInput.Text);
                 shihtzu = Convert.ToInt16(shihtzuInput.Text);
-                pricewithTax = Convert.ToInt16(Text);
 
-                tax = price * TAX_COST;
-
-               
-                
 
                 //get inputs from screen and put into poodle, pug, and  ...
 
-                price = (poodle * POODLE_COST) + (pug * PUG_COST) + (shihtzu * SHITTZU_COST) + (poodle + pug + shihtzu * FIRSTSHOTS_COST) * TAX_COST;
+                price = (poodle * POODLE_COST) + (pug * PUG_COST) + (shihtzu * SHITTZU_COST) + ((poodle + pug + shihtzu) * FIRSTSHOTS_COST);
+                tax = price * TAX_COST;
+                pricewithtax = price + tax;
 
-                outputLabel.Text = price.ToString("C");
+                priceLabel.Text = price.ToString("C");
+                taxLabel.Text = tax.ToString("C");
+                priceWithTaxLabel = pricewithtax.ToString("C")
+
 
             }
             catch
