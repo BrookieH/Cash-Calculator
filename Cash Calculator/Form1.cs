@@ -41,6 +41,7 @@ namespace Cash_Calculator
                 pricewithTax = Convert.ToInt16(Text);
 
                 tax = price * TAX_COST;
+
                
                 
 
