@@ -52,9 +52,11 @@
             this.priceAndTaxShow = new System.Windows.Forms.Label();
             this.priceWithTaxLabel = new System.Windows.Forms.Label();
             this.amountButton = new System.Windows.Forms.Label();
-            this.amountBox = new System.Windows.Forms.TextBox();
+            this.amountInput = new System.Windows.Forms.TextBox();
             this.changeshow = new System.Windows.Forms.Label();
             this.changeLabel = new System.Windows.Forms.Label();
+            this.receiptButton = new System.Windows.Forms.Button();
+            this.changeButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -195,9 +197,10 @@
             // outputLabel
             // 
             this.outputLabel.AutoSize = true;
-            this.outputLabel.Location = new System.Drawing.Point(383, 72);
+            this.outputLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.outputLabel.Location = new System.Drawing.Point(64, 360);
             this.outputLabel.Name = "outputLabel";
-            this.outputLabel.Size = new System.Drawing.Size(0, 13);
+            this.outputLabel.Size = new System.Drawing.Size(0, 15);
             this.outputLabel.TabIndex = 14;
             // 
             // shotLabel
@@ -223,10 +226,11 @@
             // 
             this.totalpriceShow.AutoSize = true;
             this.totalpriceShow.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.totalpriceShow.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totalpriceShow.ForeColor = System.Drawing.SystemColors.MenuText;
             this.totalpriceShow.Location = new System.Drawing.Point(416, 103);
             this.totalpriceShow.Name = "totalpriceShow";
-            this.totalpriceShow.Size = new System.Drawing.Size(58, 13);
+            this.totalpriceShow.Size = new System.Drawing.Size(65, 15);
             this.totalpriceShow.TabIndex = 17;
             this.totalpriceShow.Text = "Total Price";
             // 
@@ -243,21 +247,24 @@
             // 
             this.taxShow.AutoSize = true;
             this.taxShow.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.taxShow.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.taxShow.Location = new System.Drawing.Point(416, 136);
             this.taxShow.Name = "taxShow";
-            this.taxShow.Size = new System.Drawing.Size(21, 13);
+            this.taxShow.Size = new System.Drawing.Size(27, 15);
             this.taxShow.TabIndex = 19;
-            this.taxShow.Text = "tax";
+            this.taxShow.Text = "Tax";
+            this.taxShow.Click += new System.EventHandler(this.taxShow_Click);
             // 
             // priceAndTaxShow
             // 
             this.priceAndTaxShow.AutoSize = true;
             this.priceAndTaxShow.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.priceAndTaxShow.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.priceAndTaxShow.Location = new System.Drawing.Point(416, 174);
             this.priceAndTaxShow.Name = "priceAndTaxShow";
-            this.priceAndTaxShow.Size = new System.Drawing.Size(70, 13);
+            this.priceAndTaxShow.Size = new System.Drawing.Size(83, 15);
             this.priceAndTaxShow.TabIndex = 20;
-            this.priceAndTaxShow.Text = "Price with tax";
+            this.priceAndTaxShow.Text = "Price with Tax";
             // 
             // priceWithTaxLabel
             // 
@@ -272,37 +279,62 @@
             // 
             this.amountButton.AutoSize = true;
             this.amountButton.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.amountButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.amountButton.Location = new System.Drawing.Point(416, 214);
             this.amountButton.Name = "amountButton";
-            this.amountButton.Size = new System.Drawing.Size(86, 13);
+            this.amountButton.Size = new System.Drawing.Size(98, 15);
             this.amountButton.TabIndex = 22;
             this.amountButton.Text = "Amount Tenderd";
             // 
-            // amountBox
+            // amountInput
             // 
-            this.amountBox.Location = new System.Drawing.Point(524, 211);
-            this.amountBox.Name = "amountBox";
-            this.amountBox.Size = new System.Drawing.Size(45, 20);
-            this.amountBox.TabIndex = 23;
+            this.amountInput.Location = new System.Drawing.Point(524, 211);
+            this.amountInput.Name = "amountInput";
+            this.amountInput.Size = new System.Drawing.Size(45, 20);
+            this.amountInput.TabIndex = 23;
             // 
             // changeshow
             // 
             this.changeshow.AutoSize = true;
             this.changeshow.BackColor = System.Drawing.Color.MediumTurquoise;
-            this.changeshow.Location = new System.Drawing.Point(419, 250);
+            this.changeshow.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.changeshow.Location = new System.Drawing.Point(420, 299);
             this.changeshow.Name = "changeshow";
-            this.changeshow.Size = new System.Drawing.Size(68, 13);
+            this.changeshow.Size = new System.Drawing.Size(79, 15);
             this.changeshow.TabIndex = 24;
-            this.changeshow.Text = "Change due:";
+            this.changeshow.Text = "Change Due:";
             // 
             // changeLabel
             // 
             this.changeLabel.AutoSize = true;
-            this.changeLabel.Location = new System.Drawing.Point(521, 250);
+            this.changeLabel.Location = new System.Drawing.Point(522, 299);
             this.changeLabel.Name = "changeLabel";
             this.changeLabel.Size = new System.Drawing.Size(13, 13);
             this.changeLabel.TabIndex = 25;
             this.changeLabel.Text = "4";
+            // 
+            // receiptButton
+            // 
+            this.receiptButton.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.receiptButton.Font = new System.Drawing.Font("Sitka Text", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.receiptButton.Location = new System.Drawing.Point(455, 335);
+            this.receiptButton.Name = "receiptButton";
+            this.receiptButton.Size = new System.Drawing.Size(91, 38);
+            this.receiptButton.TabIndex = 26;
+            this.receiptButton.Text = "Print Receipt";
+            this.receiptButton.UseVisualStyleBackColor = false;
+            this.receiptButton.Click += new System.EventHandler(this.receiptButton_Click);
+            // 
+            // changeButton
+            // 
+            this.changeButton.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.changeButton.Location = new System.Drawing.Point(454, 246);
+            this.changeButton.Name = "changeButton";
+            this.changeButton.Size = new System.Drawing.Size(80, 33);
+            this.changeButton.TabIndex = 27;
+            this.changeButton.Text = "Tendered";
+            this.changeButton.UseVisualStyleBackColor = false;
+            this.changeButton.Click += new System.EventHandler(this.changeButton_Click);
             // 
             // Form1
             // 
@@ -311,9 +343,11 @@
             this.BackColor = System.Drawing.Color.LightCyan;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(776, 385);
+            this.Controls.Add(this.changeButton);
+            this.Controls.Add(this.receiptButton);
             this.Controls.Add(this.changeLabel);
             this.Controls.Add(this.changeshow);
-            this.Controls.Add(this.amountBox);
+            this.Controls.Add(this.amountInput);
             this.Controls.Add(this.amountButton);
             this.Controls.Add(this.priceWithTaxLabel);
             this.Controls.Add(this.priceAndTaxShow);
@@ -373,9 +407,11 @@
         private System.Windows.Forms.Label priceAndTaxShow;
         private System.Windows.Forms.Label priceWithTaxLabel;
         private System.Windows.Forms.Label amountButton;
-        private System.Windows.Forms.TextBox amountBox;
+        private System.Windows.Forms.TextBox amountInput;
         private System.Windows.Forms.Label changeshow;
         private System.Windows.Forms.Label changeLabel;
+        private System.Windows.Forms.Button receiptButton;
+        private System.Windows.Forms.Button changeButton;
     }
 }
 
