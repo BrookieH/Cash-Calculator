@@ -77,17 +77,17 @@ namespace Cash_Calculator
             SolidBrush receiptBrush = new SolidBrush(Color.Black);
 
             Font receiptFont = new Font("Microsoft Sans Serif New", 9);
-            formGraphics.FillRectangle(taxBrush, 600, 0, 500, 500);
+            formGraphics.FillRectangle(taxBrush, 570, 0, 650, 500);
 
-            formGraphics.DrawString("Your Ordered", receiptFont, receiptBrush, 670, 35);
-            formGraphics.DrawString("Poodles Ordered;    " +poodle, receiptFont, receiptBrush, 650, 70);
-            formGraphics.DrawString("Pugs Ordered;       " +pug, receiptFont, receiptBrush, 650, 90);
-            formGraphics.DrawString("Shih Tzu's Ordered;  " +shihtzu, receiptFont, receiptBrush, 650, 110);
-            formGraphics.DrawString("Shot price added;   " +shots, receiptFont, receiptBrush, 650, 130);
-            formGraphics.DrawString("Total Comes to;     " +price.ToString("C"), receiptFont, receiptBrush, 650, 150);
-            formGraphics.DrawString("Tax;                " +tax.ToString("C"), receiptFont, receiptBrush, 650, 170);
-            formGraphics.DrawString("Your total with tax " +pricewithtax.ToString("C"), receiptFont, receiptBrush, 650, 190);
-            formGraphics.DrawString("Thank you           " + receiptFont, receiptFont, 650, 200);
+            formGraphics.DrawString("Your Order", receiptFont, receiptBrush, 600, 35);
+            formGraphics.DrawString("Poodles Ordered;    " +poodle, receiptFont, receiptBrush, 600, 70);
+            formGraphics.DrawString("Pugs Ordered;       " +pug, receiptFont, receiptBrush, 600, 90);
+            formGraphics.DrawString("Shih Tzu's Ordered;  " +shihtzu, receiptFont, receiptBrush, 600, 110);
+            formGraphics.DrawString("Shot price added;   " +shots, receiptFont, receiptBrush, 600, 130);
+            formGraphics.DrawString("Total Comes to;     " +price.ToString("C"), receiptFont, receiptBrush, 600, 150);
+            formGraphics.DrawString("Tax;                " +tax.ToString("C"), receiptFont, receiptBrush, 600, 170);
+            formGraphics.DrawString("Your total with tax " +pricewithtax.ToString("C"), receiptFont, receiptBrush, 600, 190);
+            formGraphics.DrawString("Thank you           " +receiptFont, receiptFont, receiptBrush, 600, 210);
 
 
 
@@ -97,11 +97,23 @@ namespace Cash_Calculator
 
         private void changeButton_Click(object sender, EventArgs e)
         {
-            amount = Convert.ToDouble(amountInput.Text);
+            try
+            {
 
-            change = amount - pricewithtax;
 
-            changeLabel.Text = change.ToString("C");
+                amount = Convert.ToDouble(amountInput.Text);
+
+                change = amount - pricewithtax;
+
+                changeLabel.Text = change.ToString("C");
+
+
+            }
+
+            catch
+            {
+                outputLabel.Text = "Please enter more money";
+            }
 
         }
     }
