@@ -76,18 +76,18 @@ namespace Cash_Calculator
             SolidBrush taxBrush = new SolidBrush(Color.White);
             SolidBrush receiptBrush = new SolidBrush(Color.Black);
 
-            Font receiptFont = new Font("Microsoft Sans Serif New", 9);
+            Font receiptFont = new Font("Consolas", 9);
             formGraphics.FillRectangle(taxBrush, 570, 0, 650, 500);
 
             formGraphics.DrawString("Your Order", receiptFont, receiptBrush, 600, 35);
             formGraphics.DrawString("Poodles Ordered;    " +poodle, receiptFont, receiptBrush, 600, 70);
             formGraphics.DrawString("Pugs Ordered;       " +pug, receiptFont, receiptBrush, 600, 90);
-            formGraphics.DrawString("Shih Tzu's Ordered;  " +shihtzu, receiptFont, receiptBrush, 600, 110);
+            formGraphics.DrawString("Shih Tzu's Ordered; " +shihtzu, receiptFont, receiptBrush, 600, 110);
             formGraphics.DrawString("Shot price added;   " +shots, receiptFont, receiptBrush, 600, 130);
             formGraphics.DrawString("Total Comes to;     " +price.ToString("C"), receiptFont, receiptBrush, 600, 150);
             formGraphics.DrawString("Tax;                " +tax.ToString("C"), receiptFont, receiptBrush, 600, 170);
             formGraphics.DrawString("Your total with tax " +pricewithtax.ToString("C"), receiptFont, receiptBrush, 600, 190);
-            formGraphics.DrawString("Thank you           " +receiptFont, receiptFont, receiptBrush, 600, 210);
+            formGraphics.DrawString("Thank you           ", receiptFont, receiptBrush, 600, 210);
 
 
 
@@ -115,6 +115,15 @@ namespace Cash_Calculator
                 outputLabel.Text = "Please enter more money";
             }
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Graphics formGrphics = this.CreateGraphics();
+            SolidBrush taxBrush = new SolidBrush(Color.LightCyan);
+            SolidBrush receiptBrush = new SolidBrush(Color.Black);
+
+            formGraphics.FillRectangle(taxBrush, 570, 0, 650, 500);
         }
     }
 }

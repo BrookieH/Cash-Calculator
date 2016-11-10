@@ -57,6 +57,7 @@
             this.changeLabel = new System.Windows.Forms.Label();
             this.receiptButton = new System.Windows.Forms.Button();
             this.changeButton = new System.Windows.Forms.Button();
+            this.newOrder = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -218,9 +219,8 @@
             this.taxLabel.AutoSize = true;
             this.taxLabel.Location = new System.Drawing.Point(521, 136);
             this.taxLabel.Name = "taxLabel";
-            this.taxLabel.Size = new System.Drawing.Size(13, 13);
+            this.taxLabel.Size = new System.Drawing.Size(0, 13);
             this.taxLabel.TabIndex = 16;
-            this.taxLabel.Text = "2";
             // 
             // totalpriceShow
             // 
@@ -239,9 +239,8 @@
             this.priceLabel.AutoSize = true;
             this.priceLabel.Location = new System.Drawing.Point(521, 103);
             this.priceLabel.Name = "priceLabel";
-            this.priceLabel.Size = new System.Drawing.Size(13, 13);
+            this.priceLabel.Size = new System.Drawing.Size(0, 13);
             this.priceLabel.TabIndex = 18;
-            this.priceLabel.Text = "1";
             // 
             // taxShow
             // 
@@ -271,9 +270,8 @@
             this.priceWithTaxLabel.AutoSize = true;
             this.priceWithTaxLabel.Location = new System.Drawing.Point(521, 174);
             this.priceWithTaxLabel.Name = "priceWithTaxLabel";
-            this.priceWithTaxLabel.Size = new System.Drawing.Size(13, 13);
+            this.priceWithTaxLabel.Size = new System.Drawing.Size(0, 13);
             this.priceWithTaxLabel.TabIndex = 21;
-            this.priceWithTaxLabel.Text = "3";
             // 
             // amountButton
             // 
@@ -309,9 +307,8 @@
             this.changeLabel.AutoSize = true;
             this.changeLabel.Location = new System.Drawing.Point(522, 299);
             this.changeLabel.Name = "changeLabel";
-            this.changeLabel.Size = new System.Drawing.Size(13, 13);
+            this.changeLabel.Size = new System.Drawing.Size(0, 13);
             this.changeLabel.TabIndex = 25;
-            this.changeLabel.Text = "4";
             // 
             // receiptButton
             // 
@@ -336,13 +333,25 @@
             this.changeButton.UseVisualStyleBackColor = false;
             this.changeButton.Click += new System.EventHandler(this.changeButton_Click);
             // 
+            // newOrder
+            // 
+            this.newOrder.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.newOrder.Location = new System.Drawing.Point(667, 340);
+            this.newOrder.Name = "newOrder";
+            this.newOrder.Size = new System.Drawing.Size(91, 32);
+            this.newOrder.TabIndex = 28;
+            this.newOrder.Text = "New Order";
+            this.newOrder.UseVisualStyleBackColor = false;
+            this.newOrder.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(776, 385);
+            this.ClientSize = new System.Drawing.Size(842, 385);
+            this.Controls.Add(this.newOrder);
             this.Controls.Add(this.changeButton);
             this.Controls.Add(this.receiptButton);
             this.Controls.Add(this.changeLabel);
@@ -412,6 +421,7 @@
         private System.Windows.Forms.Label changeLabel;
         private System.Windows.Forms.Button receiptButton;
         private System.Windows.Forms.Button changeButton;
+        private System.Windows.Forms.Button newOrder;
     }
 }
 
